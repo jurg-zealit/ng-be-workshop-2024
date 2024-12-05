@@ -19,6 +19,8 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
+      - run: npx nx-cloud start-ci-run --distribute-on=".nx/workflows/distribution-config.yaml" --stop-agents-after="e2e-ci"
+
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
