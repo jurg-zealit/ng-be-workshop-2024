@@ -50,6 +50,7 @@
         "distLocation": "dist/apps/movies-api",
         "flyAppName": "jurgen-workshop-2024"
       },
+      "inputs": [{ "runtime": "fly version" }],
       "dependsOn": [
         { "target": "build", "projects": "self", "params": "forward" }
       ]
