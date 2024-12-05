@@ -108,9 +108,9 @@
       "executor": "nx:run-commands",
       "outputs": [],
       "options": {
-        "command": "npx surge dist/apps/movies-app/browser https://ng-be-workshop124.surge.sh --token d4cc7aca925438fd56427aefd04b6278",
-        "envFile": "apps/movies-app/local.env"
+        "command": "npx surge dist/apps/movies-app/browser ${SURGE_DOMAIN} --token ${SURGE_TOKEN}"
       },
+      "inputs": [{ "externalDependencies": ["nx", "surge" ] }],
       "dependsOn": ["build"]
     }
   }
